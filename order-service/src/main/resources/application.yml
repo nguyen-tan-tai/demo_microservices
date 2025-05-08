@@ -1,0 +1,28 @@
+server:
+  port: 22020
+  forward-headers-strategy: framework
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){blue} %clr([%X{traceId:-},%X{spanId:-}]){cyan} %clr(${LOG_LEVEL_PATTERN:-%5p}) %m%n"
+
+springdoc:
+  packagesToScan: com.example.orderservice
+  cache:
+    disabled: true
+  api-docs:
+    version: openapi-3-1
+
+spring:
+  application:
+    name: OrderApp
+  output:
+    ansi:
+      enabled: always
