@@ -27,13 +27,13 @@ spring:
           enabled: true
       routes:
       - id: catalog-service
-        uri: lb://catalog-service
+        uri: lb://CatalogApp
         predicates:
         - Path=/catalog/**
         filters:
         - RewritePath=/catalog/(?<path>.*), /$\{path}
       - id: order-service
-        uri: lb://order-service
+        uri: lb://OrderApp
         predicates:
         - Path=/order/**
         filters:
