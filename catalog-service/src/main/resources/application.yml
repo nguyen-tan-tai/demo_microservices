@@ -1,6 +1,9 @@
 server:
   port: 22010
   forward-headers-strategy: framework
+  error:
+    whitelabel:
+      enabled: false
 
 eureka:
   client:

@@ -1,7 +1,9 @@
 server:
   port: 22020
   forward-headers-strategy: framework
-
+  error:
+    whitelabel:
+      enabled: false
 eureka:
   client:
     serviceUrl:
