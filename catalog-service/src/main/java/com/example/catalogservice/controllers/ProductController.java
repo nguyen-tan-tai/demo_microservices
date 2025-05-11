@@ -22,11 +22,11 @@ public class ProductController {
     }
 
     @GetMapping("/product/code/{code}")
-    public Product findById(@PathVariable("code") String code) {
+    public Product findById(@PathVariable String code) {
         return repository.findByCode(code);
     }
 
-    @GetMapping("/")
+    @GetMapping("/product/")
     public List<Product> findAll() {
         return repository.findAll();
     }
