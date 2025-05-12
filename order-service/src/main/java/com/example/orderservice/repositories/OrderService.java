@@ -1,14 +1,16 @@
 package com.example.orderservice.repositories;
 
-import com.example.orderservice.controllers.OrderController.OrderItem;
-import com.example.orderservice.models.Order;
 import java.util.List;
+
 import org.springframework.stereotype.Service;
+
+import com.example.orderservice.models.Order;
+import com.example.orderservice.models.OrderDetail;
 
 @Service
 public class OrderService {
 
-    public Long placeOrder(List<OrderItem> list) {
+    public Long placeOrder(List<OrderDetail> list) {
         Order order = new Order();
         return order.getId();
     }

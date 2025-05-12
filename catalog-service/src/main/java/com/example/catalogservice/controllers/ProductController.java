@@ -26,7 +26,7 @@ public class ProductController {
         return repository.findByCode(code);
     }
 
-    @GetMapping("/product/")
+    @GetMapping("/products")
     public List<Product> findAll() {
         return repository.findAll();
     }
